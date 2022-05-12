@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        #left{
+            position: relative;
+            left: 1950%;
+        }
+        img{
+            width: 650px;
+            margin-left: 50px;
+            margin-top: 50px;
+
+        }
+        .row{
+            margin-right: 10px;
+            position: relative;
+            bottom:  120px;
+            left: 40px;
+
+        }
+        form{
+        margin-right:4em;
+
+        }
+
+    </style>
+</head>
+<body style="background-color:rgb(0, 204, 255);">
+{% extends 'basic.html' %}
+{% block content %}
+<form action="login" method="POST">
+    {% csrf_token %}
+    {%load static%}
+<div class="col-md-8"> <img src="{% static 'photo/d14l.png'%}" alt=""></div>
+      <!-- <div class="col-6 col-md-4"> <img src="Software-Development.png" alt=""></div> -->
+      <div class="row">
+        <div class="col-6 col-md-4"></div>
+        <div class="col-6 col-md-4"></div>
+        <div  class="col-6 col-md-4">
+            <form>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">User Name</label>
+                  <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="username">
+                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+                </div>
+                <div class="mb-3 form-check">
+
+
+                     <a class="nav-link" href="/push">signup</a>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+        </div>
+
+      </div>
+{% endblock %}
+</body>
+</html>

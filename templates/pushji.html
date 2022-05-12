@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+      <style>
+        #left{
+            position: relative;
+            left: 1950%;
+        }
+
+        label{
+            display: inline-block;
+        }
+        .row1 .row{
+
+          position: relative;
+          bottom:30em;
+          text-align: center;
+          size: 20px;
+
+        }
+        .row1 .row,h1{
+          color:rgba(245, 2, 55, 0.664);
+        }
+        div.main{
+          width: 500px;
+          margin: 151px auto 0px auto;
+        }
+        h2{
+          text-align: center;
+          padding: 20px;
+          font-family: sans-serif;
+        }
+        div.register{
+
+          background-color: rgba(0,0,0,0.5);
+          width:100% ;
+          font-size: 21px;
+          border-radius: 15px;
+          border:1px solid rgba(255,255,255,0.3) ;
+          box-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+          color:#fff;
+
+        }
+        form#register{
+          margin: 41px;
+        }
+        label{
+          font-family: sans-serif;
+          font-size: 18px;
+          font-style: italic;        }
+          input#name{
+            width: 300px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            outline: 0;
+            padding: 7px;
+            background-color: #fff;
+            box-shadow: inset 1px 1px 5px  rgba(0,0,0,0.3);
+
+          }
+          input#submit{
+
+            width: 200px;
+            padding: 7px;
+            font-size: 16px;
+            font-family:sans-serif ;
+            font-weight: 600;
+            border: none;
+            border-radius: 3px;
+            background-color: rgba(250,100,0,0.8);
+            color: #fff;
+            cursor: pointer;
+            border: 1px solid rgba(255,255,255,0.3);
+            box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+
+
+          }
+
+          label,span,h2{
+            text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+          }
+          .main{
+
+            position:absolute;
+            top:-1px;
+            right:60px;
+
+
+          }
+          img{
+            width:106em;
+            height: 48em;
+          }
+
+
+    </style>
+</head>
+<body>
+
+
+
+
+<!--   enter Full name :<input type="text" name="name"><br>-->
+<!--   enter phone number :<input type="number" name="phone"><br>-->
+<!--   enter email :<input type="email" name="email"><br>-->
+<!--   enter address :<input type="text" name="address"><br>-->
+
+<!--   <input type="submit">-->
+
+
+    {% extends 'basic.html' %}
+{%load static%}
+{% block content %}
+
+
+    <img src="{% static 'photo/soft.jpg'%}">
+
+        <div class="main">
+          <div class="register">
+            <h2> Contact Information:</h2>
+              <div class="move">
+            <form action="push" id="register" method="POST">
+             {% csrf_token%}
+              <label>Full Name: </label>
+              <br>
+              <input type="text" name="name" id="name" placeholder="Enter your Full name ">
+              <br> <br>
+
+              <label>Phone: </label>
+              <br>
+              <input type="number" name="phone" id="name" placeholder="enter your Phone number">
+              <br> <br>
+              <label>Email: </label>
+              <br>
+              <input type="email" name="email" id="name" placeholder="Enter your email id ">
+              <br> <br>
+              <label>Address: </label>
+              <br>
+              <input type="text" name="address" id="name" placeholder="enter your correct address ">
+              <br> <br>
+
+              <input type="submit" value="submit" name="submit" id="submit">
+
+
+
+
+
+
+
+            </form>
+                  </div>
+          </div>
+        </div>
+
+
+{% endblock %}
+</body>
+</html>

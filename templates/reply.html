@@ -1,0 +1,21 @@
+{% extends 'basic.html' %}
+{% block content %}
+{% for item in tasks%}
+
+
+<h1  scope="row" style=" position:absolute;
+    left: 52px;"> {{ forloop.counter}}</h1>
+
+
+<div class="col-lg-6 mx-auto">
+    <h1 class="display-9 fw-bold">By {{item.user}}</h1>
+      <p class="lead mb-4">{{ item.comment}}</p> <span> {{item.timestamp}}</span>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        <a href="/">
+        <button type="button" class="btn btn-outline-secondary btn-lg px-4">BACK</button></a>
+      </div>
+    </div>
+
+{% endfor %}
+
+{% endblock%}

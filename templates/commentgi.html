@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+     <style>
+        #left{
+            position: relative;
+            left: 1950%;
+        }
+
+        label{
+            display: inline-block;
+        }
+        .row1 .row{
+
+          position: relative;
+          bottom:30em;
+          text-align: center;
+          size: 20px;
+
+        }
+        .row1 .row,h1{
+          color:rgba(245, 2, 55, 0.664);
+        }
+        div.main{
+          width: 500px;
+          margin: 151px auto 0px auto;
+        }
+        h2{
+          text-align: center;
+          padding: 20px;
+          font-family: sans-serif;
+        }
+        div.register{
+
+          background-color: rgba(0,0,0,0.5);
+          width:100% ;
+          font-size: 21px;
+          border-radius: 15px;
+          border:1px solid rgba(255,255,255,0.3) ;
+          box-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+          color:#fff;
+
+        }
+        form#register{
+          margin: 41px;
+        }
+        label{
+          font-family: sans-serif;
+          font-size: 18px;
+          font-style: italic;        }
+          input#name{
+            width: 300px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            outline: 0;
+            padding: 7px;
+            background-color: #fff;
+            box-shadow: inset 1px 1px 5px  rgba(0,0,0,0.3);
+
+          }
+          input#submit{
+
+            width: 200px;
+            padding: 7px;
+            font-size: 16px;
+            font-family:sans-serif ;
+            font-weight: 600;
+            border: none;
+            border-radius: 3px;
+            background-color: rgba(250,100,0,0.8);
+            color: #fff;
+            cursor: pointer;
+            border: 1px solid rgba(255,255,255,0.3);
+            box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+
+
+          }
+
+          label,span,h2{
+            text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+          }
+          .main{
+
+            position:absolute;
+            top:-1px;
+            right:60px;
+
+
+          }
+
+
+
+    </style>
+</head>
+<body>
+
+{% extends 'basic.html' %}
+
+{% block content %}
+{%load static%}
+
+    <div class="py-5 text-center">
+      <img class="d-block mx-auto mb-4" src="{% static 'photo/imggi.jpg'%}" alt="" width="500">
+      <h2>Arya CODER 9</h2>
+      <p class="lead">Welcome in Arya CODER 9 sir/mem . This is comment site .sir/mem you can use it for give your experience while usig this site
+       </p>
+    </div>
+<div class="container">
+<form action="comment" method="POST">
+     {% csrf_token%}
+
+
+
+              Enter Title:<input type="text" name="title" id="name" placeholder="Enter your Full name ">
+              <br>
+
+
+              <br>
+              Enter Content:<input type="text" name="content" id="name" placeholder="please type content">
+              <br>
+
+               <br>
+               Enter Author:<input type="text" name="author" id="name" placeholder="Sonuc">
+              <br>
+
+              <br>
+               Enter Date $ Time:<input type="datetime-local" name="time" id="name" >
+
+
+
+
+
+
+   <input type="submit">
+
+
+</form>
+    </div>
+{% endblock %}
+</body>
+</html>

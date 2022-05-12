@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        footer{
+        margin-top:70px;"}
+
+    </style>
+</head>
+<body style="background-color: rgb(128, 242, 250);">
+
+
+{% extends 'basic.html' %}
+{% block content %}
+{% load static%}
+<div class="container" id="toop">
+<div class="jumbotron">
+
+  <h1 class="display-4" style="margin-top:20px;" id="soo" >WELCOME TO ARYA CODER 9 </h1>
+  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+  <hr class="my-4">
+  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="app2/bloggi" role="button">go to blog</a>
+  </p>
+</div>
+
+
+<section class="pricing" style="margin-top:15px;">
+    <div class="text">
+    <h2>A Plan for Every Dog's Needs</h2>
+    <p class="text2">Simple and affordable price plans for your and your dog.</p>
+  </div>
+    <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+      <div class="gap">
+      <div class="card">
+        <div class="card-header">
+          <h3>Chihuahua</h3>
+        </div>
+        <div class="card-body">
+          <h2>Free</h2>
+          <p>5 Matches Per Day</p>
+          <p>10 Messages Per Day</p>
+
+
+          <button type="button" class="btn btn-outline-primary" id="b1"><a href="blog/signup" >Sing up for free</a></button>
+        </div>
+      </div>
+    </div>
+
+      <div class="gap">
+      <div class="card">
+        <div class="card-header">
+          <h3>Labrador</h3>
+        </div>
+        <div class="card-body">
+          <h2>$49 / mo</h2>
+
+          <p>Unlimited Messages</p>
+          <p> coming soon</p>
+
+          <button type="button" class="btn btn-warning" id="b2">Get start</button>
+        </div>
+      </div>
+    </div>
+
+      <div class="gap">
+      <div class="card">
+        <div class="card-header">
+          <h3>Mastiff</h3>
+        </div>
+        <div class="card-body">
+          <h2>$99 / mo</h2>
+          <p>Pirority Listing</p>
+
+
+          <p>Unlimited Messages</p>
+          <a href="blog/push">
+          <button type="button" class="btn btn-warning" id="b3" >Contact</button></a>
+        </div>
+      </div>
+    </div>
+    </div>
+
+  </section>
+    </div>
+<!--<form action="error" method="post">-->
+<!--<p>sir enter your personal code</p><br>-->
+<!--<input type="text" name="num">-->
+<!--</form>-->
+
+<footer class="container py-1" >
+  <div class="row">
+    <div class="col-12 col-md">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mb-2" role="img" viewBox="0 0 24 24"><title>Product</title><circle cx="12" cy="12" r="10"></circle><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"></path></svg>
+
+
+
+
+
+
+
+      <small class="d-block mb-3 text-muted"> <a href="{% static 'arya.txt' %}" > © ARYA CODER 9 </a></small>
+    </div>
+    <div class="col-6 col-md">
+      <a href="https://www.youtube.com/channel/UCkavSCThvzTEx5m7MxjwBSw">
+      <h5>YOUTUBE</h5> </a>
+
+
+
+    </div>
+    <div class="col-6 col-md">
+      <a href="https://twitter.com/Vishwakarma9588">
+      <h5>TWITTER</h5>  </a>
+
+    </div>
+    <div class="col-6 col-md">
+      <a href="https://github.com/9588sonuvishwakarma">
+      <h5>GITHUB</h5> </a>
+
+    </div>
+    <div class="col-6 col-md">
+      <a href="https://www.linkedin.com/in/sonu-vishwakarma-686252228/">
+      <h5>LINKDIN</h5> </a>
+
+
+</footer>
+{% endblock %}
+
+
+
+</body>
+</html>
